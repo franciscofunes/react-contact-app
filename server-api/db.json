@@ -1,0 +1,19 @@
+{
+  "contacts": [
+    {
+      "id": "22b4eb7b-6f97-4c15-86cf-190d4732c8e7",
+      "name": "Laguna",
+      "email": "chau@gmail.com"
+    },
+    {
+      "id": "20dd3463-8de2-4ab8-82ae-a1e7a822db78",
+      "name": "María",
+      "email": "maria@gmail.com"
+    },
+    {
+      "id": "816d7fc0-9652-4477-97b8-e1dd46176eb6",
+      "name": "Sergio",
+      "email": "sergio@gmail.com"
+    }
+  ]
+}

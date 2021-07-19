@@ -1,0 +1,14 @@
+{
+  "name": "server-api",
+  "version": "1.0.0",
+  "description": "JSON server api for guest list react app",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server -p 3006 -w db.json"
+  },
+  "author": "Francisco Funes",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.16.3"
+  }
+}
