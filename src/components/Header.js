@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
 const Header = () => {
-    return (
-        <div className="ui large top fixed  menu ">
-            <div className="ui center aligned container">
-                <h2>Agenda</h2>
-            </div>
-        </div>
-    );
-}
+	return (
+		<div class='ui item menu'>
+			<div className='item'>
+				<h2>Invitados</h2>
+			</div>
+		</div>
+	);
+};
 
 export default Header;

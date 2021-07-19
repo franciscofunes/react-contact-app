@@ -1,19 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class AddContact extends React.Component {
-	state = {
-		name: '',
-		email: '',
-	};
+class EditContact extends React.Component {
+	constructor(props) {
+		super(props);
+		const { id, name, email } = props.location.state.contact;
+		this.state = {
+			id,
+			name,
+			email,
+		};
+	}
 
-	add = (e) => {
+	update = (e) => {
 		e.preventDefault();
 		if (this.state.name === '' || this.state.email === '') {
 			alert('Todos los campos son obligatorios');
 			return;
 		}
-		this.props.addContactHandler(this.state);
+		this.props.updateContactHandler(this.state);
 		this.setState({ name: '', email: '' });
 		this.props.history.push('/');
 	};
@@ -22,8 +27,8 @@ class AddContact extends React.Component {
 		return (
 			<div className='ui main' style={{ padding: '0 0 30px 0' }}>
 				<br></br>
-				<h2>Agregar Contacto</h2>
-				<form className='ui form' onSubmit={this.add}>
+				<h2>Editar Contacto</h2>
+				<form className='ui form' onSubmit={this.update}>
 					<div className='field'>
 						<label>Nombre</label>
 						<input
@@ -45,7 +50,7 @@ class AddContact extends React.Component {
 						/>
 					</div>
 					<button class='ui button blue' type='submit'>
-						Agregar
+						Guardar cambios
 					</button>
 					<Link to='/'>
 						<button class='ui button yellow' type='submit'>
@@ -58,4 +63,4 @@ class AddContact extends React.Component {
 	}
 }
 
-export default AddContact;
+export default EditContact;
